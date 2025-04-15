@@ -69,7 +69,7 @@ export const Navbar = () => {
             </ul>
           </div>
 
-        <button className="nav__button-mobile" onClick={openMobileNav}>
+        <button className="nav__button-mobile" onClick={openMobileNav} aria-label="Boton menú">
           {mobileIsOpen ? <X /> : <Menu />}
         </button>
       </div>
