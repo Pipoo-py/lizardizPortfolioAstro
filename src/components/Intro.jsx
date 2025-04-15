@@ -29,7 +29,7 @@ export const Intro = ()=>{
               />
             </div>
             <p className="main__p">
-              Hola, soy Alejandro Salazar Lizardiz. Transformo ideas complejas en experiencias digitales claras, rápidas y efectivas. Como Desarrollador Frontend, me especializo en construir interfaces modernas con React que no solo lucen bien, sino que resuelven problemas reales y conectan con los usuarios. ¿Te intriga ver cómo el código limpio y el diseño centrado en el usuario pueden impulsar tu proyecto? Explora mis trabajos a continuación o hablemos de tu visión.
+               ¡Hola! Soy Alejandro Salazar Lizardiz, Desarrollador Frontend especializado en transformar ideas complejas en experiencias digitales claras y efectivas. Construyo interfaces modernas con React y Astro, centradas en el usuario y la resolución de problemas. ¿Quieres ver cómo el código limpio y el diseño pueden impulsar tu proyecto? Explora mis trabajos o hablemos de tu visión.
             </p>
           </div>
       </div>
