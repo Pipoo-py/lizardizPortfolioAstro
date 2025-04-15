@@ -9,6 +9,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.0"
+    "@astrojs/react": "^4.2.4",
+    "@astrojs/sitemap": "^3.3.0",
+    "@formspree/react": "^3.0.0",
+    "@nanostores/react": "^1.0.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "astro": "^5.7.0",
+    "lucide-react": "^0.488.0",
+    "nanostores": "^1.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "sharp": "^0.34.1"
   }
 }

@@ -1,3 +1,11 @@
+---
+	import "../styles/global.css"
+	const siteTitle = "Alejandro Salazar | Desarrollador Frontend React";
+	const siteDescription = "Portafolio de Alejandro Salazar Lizardiz, desarrollador frontend junior desde Venezuela. Creando interfaces web modernas, rápidas y efectivas con React y Astro.";
+	const siteUrl = "https://lizardiznexus.netlify.app/"; 
+---
+
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +13,60 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content={siteDescription} />
+    <link rel="canonical" href={siteUrl} />
+		<meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <meta name="keywords" content="desarrollador frontend, react, astro, venezuela, portafolio" /> 
+    <script type="application/ld+json">
+      { JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person", 
+        "name": "Alejandro Salazar Lizardiz",
+        "url": siteUrl,
+        "jobTitle": "Desarrollador Frontend",
+        "worksFor": {
+        "@type": "Organization",
+        "name": "Lizardiz Nexus" 
+      },
+        "sameAs": [ 
+              "https://github.com/Pipoo-py",
+              "https://www.instagram.com/lizardiznexus/"
+              ],
+        "knowsAbout": ["React", "JavaScript", "CSS", "HTML", "Frontend Development"],
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "El Tigre",
+					"addressRegion": "Anzoátegui",
+					"addressCountry": "VE"
+				}
+			})}
+		</script>
+			<script type="application/ld+json">
+				{	JSON.stringify({
+					"@context": "https://schema.org",
+					"@type": "WebSite",
+					"url": siteUrl,
+					"name": siteTitle,
+					"publisher": { 
+            "@type": "Person",
+            "name": "Alejandro Salazar Lizardiz"
+          }
+        })}
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<title>{ siteTitle }</title>
 	</head>
-	<body>
+<body>
 		<slot />
-	</body>
+</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

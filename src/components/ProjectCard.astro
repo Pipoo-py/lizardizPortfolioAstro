@@ -1,0 +1,138 @@
+---
+import { Image } from "astro:assets"
+import Skill from "./Skill.astro"
+const { projectInfo } = Astro.props;
+---
+
+  <div class="project-view__container">
+    <div class="project-view__img-container">
+      <Image src={ projectInfo.sc } alt={ projectInfo.title }/>
+    </div>
+
+    <div class="project-view__info-container">
+      <h4 class="project-view__title">
+        { projectInfo.title }
+      </h4>
+      <p class="project-view__description">
+        { projectInfo.description }
+      </p>
+    </div>
+
+    <div class="project-view__skills-container">
+      {
+        projectInfo.skills.map(skill=>(
+          <Skill 
+            infoSkill={ skill }
+          />
+        ))
+      }
+    </div>
+
+    <div class="project-view__link-container">
+      <button class="project-view__button">
+        <a href={projectInfo.link} target="blank">Visitar</a>
+      </button>
+    </div>
+  </div>
+
+<style>
+  .project-view__container {
+  background-color: var(--base-blanco-nieve);
+  border: 1px solid var(--contraste-gris-perla);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem; /* Espacio entre tarjetas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espacio interno */
+  transition: var(--theme-transition);
+  overflow: hidden; /* Para contener bordes redondeados de la imagen */
+}
+
+.project-view__img-container {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* O la proporción que prefieras */
+  overflow: hidden; /* Asegura que la imagen no se salga */
+  border-radius: 4px; /* Bordes redondeados suaves para el contenedor de imagen */
+}
+
+.project-view__img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre el contenedor sin distorsionar */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-view__container:hover .project-view__img-container img {
+   transform: scale(1.05); /* Efecto zoom suave al pasar el ratón */
+}
+
+.project-view__info-container {
+  flex-grow: 1; /* Permite que esta sección crezca si es necesario */
+}
+
+.project-view__title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem; /* Tamaño adecuado para título de tarjeta */
+  color: var(--texto-carbon);
+  transition: color 0.3s ease;
+}
+
+.project-view__description {
+  font-size: 0.9rem;
+  color: var(--texto-pizarra);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project-view__skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Espacio entre skills */
+  margin-bottom: 1rem;
+}
+
+/* Asumiendo que el componente Skill renderiza algo con clase .skill-tag */
+.skill-tag { /* Estilo base para Skill (Modo Claro) */
+  background-color: var(--contraste-gris-perla);
+  color: var(--texto-pizarra);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: var(--theme-transition);
+}
+
+.project-view__link-container {
+  margin-top: auto; /* Empuja el botón hacia abajo si hay espacio extra */
+}
+
+.project-view__button {
+  background-color: var(--acento-azul-profundo);
+  color: var(--base-blanco-nieve);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Para que el botón no ocupe todo el ancho */
+}
+
+.project-view__button a {
+  color: inherit; /* Hereda el color del botón */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-view__button:hover {
+  background-color: #084477; /* Azul un poco más oscuro */
+  transform: translateY(-2px); /* Ligero levantamiento */
+}
+.project-view__button:active {
+  transform: translateY(0); /* Vuelve a la posición original al hacer clic */
+}
+</style>

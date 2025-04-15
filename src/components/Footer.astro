@@ -1,0 +1,74 @@
+
+---
+import { FaInstagram } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+---
+<footer class="footer">
+  <h5> Redes Sociales </h5>
+  <div class="footer__container">
+    <div class="footer__social-container">
+      <div class="social-container">
+        <FaInstagram class="social-icon"/>
+          <a href="https://www.instagram.com/lizardiznexus/" target="blank" class="social-link">Instagram</a>
+      </div>
+      <div class="social-container">
+        <FaGithub class="social-icon"/>
+        <a href="https://github.com/Pipoo-py" target="blank" class="social-link">Github</a>
+      </div>
+      </div>
+    </div>
+</footer>
+
+<style>
+  .footer h5{
+  text-align: center;
+  font-size: clamp(1.5rem, 50dvw, 2.5rem);
+  animation-name: viewTitle;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50% , cover 50% exit 100%;
+  animation-fill-mode: both;
+}
+
+.footer__social-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 64px;
+}
+
+.social-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: .8rem;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color .3s, color .3s;
+}
+
+.social-container:hover{
+  background-color: var(--acento-azul-profundo);
+  color: var(--base-blanco-nieve);
+}
+
+.social-container:hover a{
+  color: var(--base-blanco-nieve);
+}
+
+.social-container a{
+  color: var(--texto-carbon);
+  text-decoration: none;
+  transition: background-color .3s, color .3s;
+}
+
+body.dark .social-container a{
+  color: var(--base-blanco-nieve);
+  transition: var(--theme-transition);
+}
+
+
+.social-icon{
+  font-size: clamp(1.2rem, 50dvw, 1.4rem);
+}
+</style>

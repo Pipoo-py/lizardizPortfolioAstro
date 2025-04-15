@@ -1,0 +1,67 @@
+---
+import { DiReact } from "react-icons/di";
+import { DiHtml5 } from "react-icons/di";
+import { DiCss3 } from "react-icons/di";
+import { DiJsBadge } from "react-icons/di";
+
+import { SiAstro } from "react-icons/si";
+import { FaPython } from "react-icons/fa";
+import { BiLogoTypescript } from "react-icons/bi";
+import { FaGitAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+
+const { infoSkill } = Astro.props;
+---
+
+  <div class="skill__container">
+    <div class="skill">
+      { infoSkill.toLowerCase() == "html" ? <DiHtml5 /> 
+        : infoSkill.toLowerCase() == "javascript" ? <DiJsBadge /> 
+        : infoSkill.toLowerCase() == "astro" ? <SiAstro /> 
+        : infoSkill.toLowerCase() == "css" ? <DiCss3 /> 
+        : infoSkill.toLowerCase() == "python" ? <FaPython /> 
+        : infoSkill.toLowerCase() == "typescript" ? <BiLogoTypescript /> 
+        : infoSkill.toLowerCase() == "git" ? <FaGitAlt /> 
+        : infoSkill.toLowerCase() == "github" ? <FaGithub /> 
+        : infoSkill.toLowerCase() == "react" ? <DiReact /> : null}
+    </div>
+    <span>
+      { infoSkill }
+    </span>
+  </div>
+
+<style>
+  .skill__container{
+  background-color: var(--contraste-gris-perla);
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: .7rem;
+  color: var(--acento-violeta);
+  font-size: 1rem;
+  transition: backgrond-color .3s, color .3s;
+}
+
+.skill__container:hover{
+  background-color: var(--acento-violeta);
+  color: var(--base-blanco-nieve);
+}
+
+.skill__container:hover span{
+  color: var(--base-blanco-nieve)
+}
+
+.skill{
+  display: grid;
+  place-content: center;
+
+}
+
+.skill__container span{
+  color: var(--texto-carbon);
+  transition: color .3s;
+  
+}
+</style>
