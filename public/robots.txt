@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lizardiznexus.netlify.app/
+Sitemap: https://lizardiznexus.netlify.app/sitemap-index.xml
