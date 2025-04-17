@@ -14,25 +14,24 @@ export const Navbar = () => {
   const currentTheme = useStore(theme);
 
   const openMobileNav = () => {
-    if (mobileIsOpen) {
-      setIsClosing(true);
-    } else {
-      setIsClosing(false); 
-      setMobileIsOpen(true); 
-    }
-  };
-
-  const handleAnimationEnd = () => {
-    if (isClosing) {
-      setTimeout(()=>{
+    const navSectionsContainer = document.querySelector(".nav__sections-container");
+      if(mobileIsOpen){
+        setMobileIsOpen(false);
+        setIsClosing(true);
+        setTimeout(()=>{
         if (navSectionsContainer) {
           navSectionsContainer.style.display = "none";
         }
-      }, 300); 
-      setMobileIsOpen(false);
-      setIsClosing(false); 
+      }, 300);
     }
-  };
+    else{
+    if (navSectionsContainer) {
+        navSectionsContainer.style.display = "block";
+      }
+    setIsClosing(false);
+    setMobileIsOpen(true);
+  }
+}
 
   useEffect(() => {
       const storedTheme = localStorage.getItem('theme');
@@ -56,13 +55,13 @@ export const Navbar = () => {
           <div 
             ref={navSectionsRef}
             className={`nav__sections-container ${mobileIsOpen ? "isOpen" : ""} ${isClosing ? "isClosing" : ""}`}
-            onAnimationEnd={handleAnimationEnd}
           >
             <ul className="nav__sections-ul">
               <li className="nav__ul-li"> <a href="#projects" onClick={openMobileNav}> Proyectos</a> </li>
               <li className="nav__ul-li"> <a href="#about" onClick={openMobileNav}> Sobre mi</a> </li>
               <li className="nav__ul-li"> <a href="#skills" onClick={openMobileNav}> Habilidades</a> </li>
               <li className="nav__ul-li"> <a href="#form" onClick={openMobileNav}> Contacto</a> </li>
+              <li className="nav__ul-li"> <a href="https://lizardiznexusblog.netlify.app/" onClick={openMobileNav} target="blank"> Blog</a> </li>
               <li className="nav__ul-li li-theme" onClick={toggleTheme}>
                 {currentTheme === "light" ? <Moon /> : <Sun />}
               </li>

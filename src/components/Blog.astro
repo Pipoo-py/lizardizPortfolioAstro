@@ -1,0 +1,73 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+const announcementText = "¡Nuevo Blog Lanzado! Explora mis ideas, proyectos y aprendizajes.";
+const linkText = "Visitar el Blog";
+const blogUrl = "https://lizardiznexusblog.netlify.app/";
+---
+
+<section class="blog-section">
+  <div class="announcement-bar">
+    <p class="announcement-text">{announcementText}</p>
+    <a href={blogUrl} class="announcement-link">
+      {linkText}
+      <ArrowRight class="arrow-icon"/>
+    </a>
+  </div>
+<section>
+
+<style>
+  .blog-section{
+    padding: 48px;
+  }
+  .announcement-bar {
+    background-color: var(--acento-teal);
+    color: var(--base-blanco-nieve);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px;
+    margin: 42px auto;
+  }
+
+  body.dark .announcement-bar {
+    background-color: var(--acento-violeta);
+    color: var(--contraste-gris-perla);
+    box-shadow: 0 0.25rem 0.5rem rgba(255, 255, 255, 0.05);
+  }
+
+  .announcement-text {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .announcement-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--base-blanco-nieve);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  body.dark .announcement-link {
+    color: var(--contraste-gris-perla);
+  }
+
+  .announcement-link:hover {
+    color: var(--texto-carbon);
+  }
+
+  body.dark .announcement-link:hover {
+    color: var(--base-blanco-nieve);
+  }
+
+  .arrow-icon {
+    margin-left: 0.5rem;
+  }
+</style>
