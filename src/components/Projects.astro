@@ -4,7 +4,7 @@ import screenshot1 from "../assets/screenshots/sc-1.webp"
 import screenshot2 from "../assets/screenshots/sc-2.webp"
 import screenshot3 from "../assets/screenshots/sc-3.webp"
 import screenshot4 from "../assets/screenshots/sc-4.webp"
-
+import screenshot5 from "../assets/screenshots/sc-5.webp"
 
 const totalProjects = [
     {
@@ -35,6 +35,13 @@ const totalProjects = [
       link: "https://www.caracol.com.ve",
       sc: screenshot4,
     },
+    {
+      title: "Crucelis Spa & Salón",
+      description: "Página web desarrollada para un salón de estética principalmente de pedicure y manicure en Lima, Perú.",
+      skills: ["HTML","CSS","JavaScript", "Astro","React"],
+      link: "https://crucelisspalon.netlify.app/",
+      sc: screenshot5,
+    },
   ]
 ---
 
@@ -46,7 +53,6 @@ const totalProjects = [
         <div class="projects-grid__container">
         {
           totalProjects.map((project, index) => {
-            const imageUrl = `../assets/screenshots/sc-${index + 1}.webp`;
             return (
               <ProjectCard projectInfo={project}/>
               );
