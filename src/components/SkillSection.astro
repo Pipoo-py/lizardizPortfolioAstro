@@ -2,8 +2,8 @@
 import Skill from "./Skill.astro";
 const totalSkills = {
   base: ["HTML", "CSS"],
-  languages: ["JavaScript", "Python", "TypeScript"],
-  frameworksAndLibraries: ["React", "Astro"],
+  languages: ["JavaScript","Go", "SQL"],
+  frameworksAndLibraries: ["React", "Astro", "Svelte"],
   utilities: ["Git", "Github"],
   next: ["Node"],
 };
@@ -39,10 +39,10 @@ const totalSkills = {
         ))}
       </div>
       <div class="skills-section__next-container skill-div">
-        <h4> En aprendizaje </h4>
-        {totalSkills.next.map(skill => (
-          <Skill infoSkill={skill} />
-        ))}
+      <h4> En aprendizaje </h4>
+      {totalSkills.next.map(skill => (
+      <Skill infoSkill={skill} />
+      ))}
       </div>
     </div>
 </section>
