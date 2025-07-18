@@ -4,43 +4,34 @@ import screenshot1 from "../assets/screenshots/sc-1.webp"
 import screenshot2 from "../assets/screenshots/sc-2.webp"
 import screenshot3 from "../assets/screenshots/sc-3.webp"
 import screenshot4 from "../assets/screenshots/sc-4.webp"
-import screenshot5 from "../assets/screenshots/sc-5.webp"
 
 const totalProjects = [
-    {
-      title: "Clon de Twitter",
-      description: "Página con funcionalidades únicamente de frontend encargada de imitar lo mejor posible la interfaz (UI/UX) de Twitter (ahora X), usando React.",
-      skills: ["HTML", "CSS", "JavaScript", "React"],
-      link: "https://pipoo-py.github.io/twitter-clon/",
-      sc: screenshot1,
-    },
-    {
-      title: "Clon de Instagram",
-      description: "Al igual que el clon de Twitter, este busca imitar la interfaz de Instagram. Fué elaborado sin frameworks (solo HTML, CSS y JavaScript).",
-      skills: ["HTML", "CSS", "JavaScript"],
-      link: "https://pipoo-py.github.io/Instagram-copy-clon/",
-      sc: screenshot2,
-    },
-    {
-      title: "Google Pixel 9 landing page",
-      description: "Página encargada de publicitar el Google Pixel 9 y sus variaciones. Fué hecho únicamente con HTML, CSS y JavaScript.",
-      skills: ["HTML", "CSS", "JavaScript"],
-      link: "https://pipoo-py.github.io/LANDING-PAGE-PIXEL-9/",
-      sc: screenshot3,
-    },
+{
+ title: "Ecommerce demostrativo",
+ description: "Maquetación de ecommerce simple, sin funcionalidad real hecho solo para ejemplificar habilidades frontend con Astro y Svelte.",
+ skills: ["Astro", "Svelte"],
+ link: "https://izhop.netlify.app/",
+ sc: screenshot2,
+ },
+ {
+ title: "Generador de PDFs simple",
+ description: "Herramienta simple que permite generar pdfs mediante la información que se solicita e introduce en los campos, usa Go en el servidor para la elaboracion de los PDF.",
+ skills: ["Astro", "Svelte", "Go"],
+ sc: screenshot1,
+ },
     {
       title: "Caracol C.A",
       description: "Sitio web desarrollado para la empresa Caracol en Venezuela, dedicada a vender múltiples productos y servicios de caracter industrial; por ejemplo: tráilers, saneamiento ambiental, tanques de almacentamiento, movilización de equipos y generadores eléctricos.",
       skills: ["HTML","CSS","JavaScript"],
       link: "https://www.caracol.com.ve",
-      sc: screenshot4,
+      sc: screenshot3,
     },
     {
       title: "Crucelis Spa & Salón",
       description: "Página web desarrollada para un salón de estética principalmente de pedicure y manicure en Lima, Perú.",
       skills: ["HTML","CSS","JavaScript", "Astro","React"],
       link: "https://crucelisspasalon.netlify.app/",
-      sc: screenshot5,
+      sc: screenshot4,
     },
   ]
 ---
@@ -52,7 +43,7 @@ const totalProjects = [
       </h2>
         <div class="projects-grid__container">
         {
-          totalProjects.map((project, index) => {
+          totalProjects.map(project => {
             return (
               <ProjectCard projectInfo={project}/>
               );

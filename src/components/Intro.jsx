@@ -29,7 +29,7 @@ export const Intro = () => {
             />
           </div>
           <p className="main__p">
-            ¡Hola! Soy Alejandro Salazar Lizardiz, Desarrollador especializado en transformar ideas complejas en experiencias digitales claras, efectivas y de alto rendimiento. Construyo interfaces modernas con React, Astro y Svelte, centradas en el usuario y la resolución de problemas. ¿Quieres ver cómo el código limpio y el diseño pueden impulsar tu proyecto? Explora mis trabajos o hablemos de tu visión.
+            ¡Hola! Soy Alejandro Salazar Lizardiz, Desarrollador fullstack especializado en transformar ideas en experiencias digitales claras, efectivas y de alto rendimiento. Construyo interfaces modernas con React, Astro y Svelte, mientras que del lado del servidor desarrollo APIs y servicios eficientes con Go. ¿Quieres ver cómo el código limpio y el diseño pueden impulsar tu proyecto? Explora mis trabajos o hablemos de tu visión.
           </p>
         </div>
       </div>
