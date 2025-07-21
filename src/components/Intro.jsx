@@ -29,8 +29,11 @@ export const Intro = () => {
             />
           </div>
           <p className="main__p">
-            ¡Hola! Soy Alejandro Salazar Lizardiz, Desarrollador fullstack especializado en transformar ideas en experiencias digitales claras, efectivas y de alto rendimiento. Construyo interfaces modernas con React, Astro y Svelte, mientras que del lado del servidor desarrollo APIs y servicios eficientes con Go. ¿Quieres ver cómo el código limpio y el diseño pueden impulsar tu proyecto? Explora mis trabajos o hablemos de tu visión.
+            ¡Hola! Soy Alejandro Salazar, desarrollador fullstack. Transformo ideas en experiencias digitales claras y de alto rendimiento. Construyo interfaces con React, Astro y Svelte, y desarrollo APIs eficientes con Go. ¿Listo para impulsar tu proyecto?
           </p>
+          <button className="button-cv">
+            <a href="/cv.pdf" download="Alejandro_Salazar_CV">Descarga mi CV</a>
+          </button>
         </div>
       </div>
     </main>
